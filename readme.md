@@ -49,7 +49,7 @@ $epOnline = EpOnline::init($client);
 
 ```php
 // Get the available energylabel from the given address (see
-// the the official api docs (https://public.ep-online.nl/swagger/index.html) for all possible parameters  
+// the official api docs (https://public.ep-online.nl/swagger/index.html) for all possible parameters  
 $label = $epOnline->pandEnergielabel()
   ->byAddress([
     'postcode' => '3255MC',
