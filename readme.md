@@ -59,5 +59,4 @@ $label = $epOnline->pandEnergielabel()
 // Search on a ID from the bag ("adresseerbaarObjectId") 
 $address = $epOnline->pandEnergielabel()
     ->byId('1924010000030064');
-
 ```
