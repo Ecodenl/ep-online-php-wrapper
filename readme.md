@@ -4,9 +4,12 @@ A simple PHP wrapper for EP Online API.
 
 ## Version Information
 
-| Package version | API Version | Status                  | PHP Version |
-|:----------------|:------------|:------------------------|:------------|
-| 3.x.x           | 3.x.x       | Active support :rocket: | ^7.4.0 \| ^8.0 |
+To keep versioning simple, the package version is aligned with the EP-Online API version.
+
+| Package version | API Version | Status                  | PHP Version    |
+|:----------------|:------------|:------------------------|:---------------|
+| 5.x.x           | 5.x.x       | Active support :rocket: | ^8.0           |
+| 3.x.x           | 3.x.x       | No active support :x:   | ^7.4.0 \| ^8.0 |
 
 
 ## Installing
@@ -48,7 +51,7 @@ $epOnline = EpOnline::init($client);
 ### PandEnergielabel
 
 ```php
-// Get the available energylabel from the given address (see
+// Get the available energy label for the given address (see
 // the official api docs (https://public.ep-online.nl/swagger/index.html) for all possible parameters  
 $label = $epOnline->pandEnergielabel()
   ->byAddress([
@@ -56,7 +59,7 @@ $label = $epOnline->pandEnergielabel()
     'huisnummer' => 13,
   ]);
 
-// Search on a ID from the bag ("adresseerbaarObjectId") 
+// Search on a ID from the BAG ("adresseerbaarObjectId") 
 $address = $epOnline->pandEnergielabel()
     ->byId('1924010000030064');
 ```

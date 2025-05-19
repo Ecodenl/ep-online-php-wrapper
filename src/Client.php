@@ -15,7 +15,7 @@ class Client
 {
     use FluentCaller;
 
-    protected string $baseUrl = "https://public.ep-online.nl/api/v3/";
+    protected string $baseUrl = "https://public.ep-online.nl/api/v5/";
 
     private array $config;
 
@@ -25,8 +25,9 @@ class Client
 
     public function __construct(
         string $secret,
-        LoggerInterface $logger = null
-    ) {
+        ?LoggerInterface $logger = null
+    )
+    {
         $this->logger = $logger;
 
         $this->config = [
@@ -39,7 +40,7 @@ class Client
         ];
     }
 
-    public function getClient()
+    public function getClient(): ?GuzzleClient
     {
         if (is_null($this->client)) {
             if ($this->logger instanceof LoggerInterface) {
@@ -63,7 +64,7 @@ class Client
         return $this->client;
     }
 
-    public function request(string $method, string $uri, array $options = []): array
+    public function request(string $method, string $uri, array $options = []): array|string
     {
         $response = $this->getClient()->request($method, $uri, $options);
 
@@ -74,9 +75,8 @@ class Client
         return json_decode($contents, true);
     }
 
-    public function get(string $uri, array $options = []): array
+    public function get(string $uri, array $options = []): array|string
     {
         return $this->request('GET', $uri, $options);
     }
-
 }

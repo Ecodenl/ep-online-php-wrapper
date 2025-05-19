@@ -5,21 +5,18 @@ namespace Ecodenl\EpOnlinePhpWrapper\Resources;
 class PandEnergielabel extends Resource
 {
     /**
-     * Returns specific data about the given identification.
-     *
-     * @param  string  $adresseerbaarObjectId
-     *
-     * @return array
+     * Returns the energy label for a specific BAG "verblijfsobject" ID.
      */
     public function byId(string $adresseerbaarObjectId): array
     {
         return $this->client->get($this->uri("AdresseerbaarObject/{$adresseerbaarObjectId}"));
     }
 
-    public function byAddress($attributes): array
+    /**
+     * Returns the energy label for an address.
+     */
+    public function byAddress(array $attributes): array
     {
-        $response = $this->client->get($this->uri('Adres'), static::buildQuery($attributes));
-
-        return $response;
+        return $this->client->get($this->uri('Adres'), static::buildQuery($attributes));
     }
 }
