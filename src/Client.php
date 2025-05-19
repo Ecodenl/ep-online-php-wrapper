@@ -25,8 +25,9 @@ class Client
 
     public function __construct(
         string $secret,
-        LoggerInterface $logger = null
-    ) {
+        ?LoggerInterface $logger = null
+    )
+    {
         $this->logger = $logger;
 
         $this->config = [
