@@ -4,9 +4,12 @@ A simple PHP wrapper for EP Online API.
 
 ## Version Information
 
-| Package version | API Version | Status                  | PHP Version |
-|:----------------|:------------|:------------------------|:------------|
-| 3.x.x           | 3.x.x       | Active support :rocket: | ^7.4.0 \| ^8.0 |
+> [!WARNING]
+> This version is no longer supported. Be sure to check out the latest version [here](https://github.com/Ecodenl/ep-online-php-wrapper/tree/master)
+
+| Package version | API Version | Status                | PHP Version |
+|:----------------|:------------|:----------------------|:------------|
+| 3.x.x           | 3.x.x       | No active support :x: | ^7.4.0 \| ^8.0 |
 
 
 ## Installing
