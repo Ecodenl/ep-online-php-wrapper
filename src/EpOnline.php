@@ -16,9 +16,9 @@ class EpOnline
         $this->client = $client;
     }
 
-    public function info(): array
+    public function ping(): string
     {
-        return $this->client->get('info');
+        return $this->client->get('Ping');
     }
 
     public function pandEnergielabel(): PandEnergielabel
